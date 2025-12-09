@@ -18,7 +18,7 @@ require('common');
 -- Event: Incoming text (chat messages)
 ashita.events.register('text_in', 'text_in_cb', function (e)
     -- Check if the message contains the invisibility block message
-    if string.find(e.message, 'You have recieved a request to join your party from') then
+    if string.find(e.message, 'You have received a request to join your party from') then
         -- Issue the command to remove invisible buff (buff ID 69)
         AshitaCore:GetChatManager():QueueCommand(1, '/join');
     end
